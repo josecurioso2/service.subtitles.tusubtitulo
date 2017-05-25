@@ -5,6 +5,7 @@ import xbmc
 import urllib
 from operator import itemgetter
 from bs4 import BeautifulSoup
+from utils import languages
 import re
 import json
 #import pprint
@@ -14,14 +15,6 @@ import json
 APIKey = "AIzaSyAm6QlezxEd4N2flR2QO6aVYQ3cx_K4xsw";
 CSX = "006098004307864223219:fwks5vba0co";
 main_url = "https://www.tusubtitulo.com/"
-languages = {
-	"Espanol (Espana)": ("Spanish", "es", "ESP", 1),
-	"Espanol (Latinoamerica)": ("Latino", "es", "ESP", 2),
-	"English": ("English", "en", "ENG", 2),
-	"French": ("French", "fr", "FRE", 2),
-	"Italian": ("Italian", "it", "ITA", 2),
-	"Unknown": ("Unknown", "-", "???", 3),
-}
 
 def log(module, msg):
 	xbmc.log((u"### [%s] - %s" % (module,msg,)).encode('utf-8'), level=xbmc.LOGDEBUG)
