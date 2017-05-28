@@ -94,12 +94,12 @@ def getAllSubInfo(url, tvshow, season, episode):
                 lang = "Unknown"
                 languageshort = languages[lang][1]
                 languagelong = languages[lang][0]
-                filename = filename + ".(%s)" % languages[lang][2]
+                filename = filename + "(" + ver["name"] + ").(%s)" % languages[lang][2]
                 server = filename
                 order = 1 + languages[lang][3]
             data = dict()
             id = sub["link"]
-            data["rating"] = "0"
+            data["rating"] = "5"
             data["no_files"] = 1
             data["filename"] = filename
             data["server"] = server
