@@ -55,4 +55,4 @@ Another way is to submit a pull request, they are very welcome since currently I
 
 ## License
 
-This project is licensed under the GPL 3.0 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL 2.0 License - see the [LICENSE.md](LICENSE.txt) file for details
