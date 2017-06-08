@@ -24,8 +24,9 @@ Fast forward to now, the previous supporters have stopped giving updates and I'm
 
 ## Installation
 
-You can either download it from the releases page of this repository or look for it in the official Kodi repository from within Kodi itself.
-Note: since they have to manually accept updates it is possible that this one is, at times, more updated than the other one
+~~You can either download it from the releases page of this repository or look for it in the official Kodi repository from within Kodi itself.
+Note: since they have to manually accept updates it is possible that this one is, at times, more updated than the other one~~
+Note2: somehow TuSubtitulo.com removed it from Kodi so now this repository is the only place to get it As updated as possible.
 
 
 ## Features
