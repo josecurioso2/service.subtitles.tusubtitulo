@@ -26,7 +26,7 @@ Fast forward to now, the previous supporters have stopped giving updates and I'm
 
 ~~You can either download it from the releases page of this repository or look for it in the official Kodi repository from within Kodi itself.
 Note: since they have to manually accept updates it is possible that this one is, at times, more updated than the other one~~
-Note2: somehow TuSubtitulo.com removed it from Kodi so now this repository or my own Kodi repo is the only place to get it s updated as possible. It is advisable that you install my repo from [here](https://github.com/josecurioso/repository.josecurioso.kodi/releases) and then install the addon from inside that repo, this way you will get updates automatically even if Kodi has decided my addon has no place in their repo.
+Note2: somehow TuSubtitulo.com removed it from Kodi so now [the addons release page](https://github.com/josecurioso2/service.subtitles.tusubtitulo/releases) or my own Kodi repo is the only place to get it s updated as possible. It is advisable that you install my repo from [here](https://github.com/josecurioso/repository.josecurioso.kodi/releases) and then install the addon from inside that repo, this way you will get updates automatically even if Kodi has decided my addon has no place in their repo.
 
 
 ## Features
