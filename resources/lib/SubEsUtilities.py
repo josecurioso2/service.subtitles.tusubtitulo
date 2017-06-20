@@ -35,14 +35,29 @@ def cleanLang(lang):
 
 
 def buildURL(tvshow, season, episode):
-	googleCSE = "https://www.googleapis.com/customsearch/v1?key=" + APIKey + "&cx=" + CSX + "&fields=items(title,link)&q="; #separe spaces with +
-	searchURL = googleCSE + tvshow.replace(" ", "+")
+    try{
+        APIKey = "AIzaSyAm6QlezxEd4N2flR2QO6aVYQ3cx_K4xsw"
+    	googleCSE = "https://www.googleapis.com/customsearch/v1?key=" + APIKey + "&cx=" + CSX + "&fields=items(title,link)&q="; #separe spaces with +
+    	searchURL = googleCSE + tvshow.replace(" ", "+")
 
-	page = urllib.urlopen(searchURL).read()
-	data = json.loads(page)
-	showIdWord = data["items"][0]["title"].strip().strip("TuSubtitulo").strip().strip("-").strip().replace(" ", "-")
+    	page = urllib.urlopen(searchURL).read()
+    	data = json.loads(page)
+    	showIdWord = data["items"][0]["title"].strip().strip("TuSubtitulo").strip().strip("-").strip().replace(" ", "-")
 
-	episodeFetch = "https://www.tusubtitulo.com/showsub.php?ushow=" + showIdWord.lower() + "&useason=" + str(season) + "&uepisode=" + str(episode)
+    	episodeFetch = "https://www.tusubtitulo.com/showsub.php?ushow=" + showIdWord.lower() + "&useason=" + str(season) + "&uepisode=" + str(episode)
+    }
+    except{
+        APIKey = "AIzaSyAdtBdgZnLvZAcskQVYZcMLSnPu57z4HGA"
+        googleCSE = "https://www.googleapis.com/customsearch/v1?key=" + APIKey + "&cx=" + CSX + "&fields=items(title,link)&q="; #separe spaces with +
+    	searchURL = googleCSE + tvshow.replace(" ", "+")
+
+    	page = urllib.urlopen(searchURL).read()
+    	data = json.loads(page)
+    	showIdWord = data["items"][0]["title"].strip().strip("TuSubtitulo").strip().strip("-").strip().replace(" ", "-")
+
+    	episodeFetch = "https://www.tusubtitulo.com/showsub.php?ushow=" + showIdWord.lower() + "&useason=" + str(season) + "&uepisode=" + str(episode)
+    }
+
 
 	return episodeFetch
 
