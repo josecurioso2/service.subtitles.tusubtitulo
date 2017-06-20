@@ -35,7 +35,8 @@ def cleanLang(lang):
 
 
 def buildURL(tvshow, season, episode):
-    try{
+    episodeFetch = ""
+    try:
         APIKey = "AIzaSyAm6QlezxEd4N2flR2QO6aVYQ3cx_K4xsw"
     	googleCSE = "https://www.googleapis.com/customsearch/v1?key=" + APIKey + "&cx=" + CSX + "&fields=items(title,link)&q="; #separe spaces with +
     	searchURL = googleCSE + tvshow.replace(" ", "+")
@@ -45,8 +46,8 @@ def buildURL(tvshow, season, episode):
     	showIdWord = data["items"][0]["title"].strip().strip("TuSubtitulo").strip().strip("-").strip().replace(" ", "-")
 
     	episodeFetch = "https://www.tusubtitulo.com/showsub.php?ushow=" + showIdWord.lower() + "&useason=" + str(season) + "&uepisode=" + str(episode)
-    }
-    except{
+
+    except:
         APIKey = "AIzaSyAdtBdgZnLvZAcskQVYZcMLSnPu57z4HGA"
         googleCSE = "https://www.googleapis.com/customsearch/v1?key=" + APIKey + "&cx=" + CSX + "&fields=items(title,link)&q="; #separe spaces with +
     	searchURL = googleCSE + tvshow.replace(" ", "+")
@@ -55,11 +56,11 @@ def buildURL(tvshow, season, episode):
     	data = json.loads(page)
     	showIdWord = data["items"][0]["title"].strip().strip("TuSubtitulo").strip().strip("-").strip().replace(" ", "-")
 
-    	episodeFetch = "https://www.tusubtitulo.com/showsub.php?ushow=" + showIdWord.lower() + "&useason=" + str(season) + "&uepisode=" + str(episode)
-    }
+        episodeFetch = "https://www.tusubtitulo.com/showsub.php?ushow=" + showIdWord.lower() + "&useason=" + str(season) + "&uepisode=" + str(episode)
 
 
-	return episodeFetch
+    log(__name__, "EpisodeLink %s" % episodeFetch)
+    return episodeFetch
 
 def getAllSubInfo(url, tvshow, season, episode):
     data = {}
