@@ -39,6 +39,9 @@ Note2: somehow TuSubtitulo.com removed it from Kodi so now [the addons release p
 ## Bugs
 
 - Be careful with another repo overwriting the addon with a different one, this happened the first days after the release but could reappear.
+- As stated in [this](https://github.com/josecurioso2/service.subtitles.tusubtitulo/issues/4) issue sometimes Kodi is not able to fullfill the dependencies of the addon. Would that be the case, you can manually download them and install from:
+    - [xbmc.python 2.25.0](https://ftp.acc.umu.se/mirror/addons.superrepo.org/v7/addons/xbmc.python/xbmc.python-2.25.0.zip)
+    - [script.module.beautifulsoup 4.5.3](https://ftp.heanet.ie/mirrors/xbmc/addons/krypton/script.module.beautifulsoup4/script.module.beautifulsoup4-4.5.3.zip)
 
 
 ## TODO
